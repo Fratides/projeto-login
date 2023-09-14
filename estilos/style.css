@@ -63,3 +63,6 @@ section#login > div#formulario {
     div#formulario > p {
         font-size: 0.8em;
     }
+    section#senha {
+        font-size: 0.2em;
+    }
