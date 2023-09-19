@@ -23,15 +23,14 @@ main{
     position: relative;
     height: 100vh;
     width: 100vw;
+
 }
 
 section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* colocando login no meio , dividindo com translater*/
     overflow: hidden;
-
     background-color: white;
     width: 250px;
     height: 515px;
@@ -40,6 +39,7 @@ section#login {
 
     transition: width .3, height .3s;
     transition-timing-function: ease;
+    transform: translate(-50%, -50%); /* colocando login no meio , dividindo com translater /// deixar sempre na ultima linha quando tiver uma animação ou transformação*/
 }
 
 section#login > div#imagem {
@@ -66,16 +66,41 @@ section#login > div#formulario {
 
     form > div.campo {
         background-color: #5f2c82;
+        border: 2px solid #5f2c82;
         display: block;
         width: 100%;
         height: 40px;
-        border-radius: 5px;
+        border-radius: 8px;
         margin: 5px 0px;
 
     }
 
     div.campo > label {
         display: none;
+    }
+
+    div.campo > i {
+        color: white;
+        /*background-color: black;*/
+        font-size: 2em;
+        width: 40px;
+        padding: 5px;
+    }
+
+    div.campo > input {
+        background-color: #94cfcd;
+        font-size: 1em;
+        width: calc(100% - 44.4px);/*usei o cod: calc para calcular a porcentagem correta*/
+        height: 100%;
+        border: 0px;
+        border-radius: 8px;
+        padding: 4px;
+        transform: translateY(-12px); /*movendo os campo do email e senha para cima /// deixar sempre na ultima linha quando tiver uma animação ou transformação*/
+    }
+
+    div.campo > input:focus-within {
+        background-color: white; /*quando seleciona o campo de login e senha fica na cor escolhida*/
+        border: none;
     }
 
     form > input[type=submit] {
